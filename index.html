@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صندوق غزة - المنصة الخيرية الجامعة</title>
+    <meta name="description"
+        content="تطبيق صندوق غزة - منصة خيرية لمد يد العون والإغاثة. حمل التطبيق الآن وكن جزءاً من الخير.">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Inline critical CSS to prevent flash */
+        body {
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Hero Section -->
+    <header class="container fade-up">
+        <h1 class="logo-text">صندوق غزة</h1>
+        <p class="mb-2" style="color: var(--primary);">المنصة الخيرية الجامعة</p>
+
+        <div class="quran-verse">
+            <p class="mb-1" style="font-size: 0.9em; opacity: 0.8;">أعوذ بالله من الشيطان الرجيم - بسم الله الرحمن
+                الرحيم</p>
+            قال الله القائل ومن أصدق من الله قيلا:
+            <br>
+            <span style="color: var(--accent); font-size: 1.2em;">
+                《مَّن ذَا الَّذِي يُقْرِضُ اللهَ قَرْضًا حَسَنًا فَيُضَاعِفَهُ لَهُ أَضْعَافًا كَثِيرَةً وَاللهُ
+                يَقْبِضُ وَيَبْسُطُ وَإِلَيْهِ تُرْجَعُونَ》
+            </span>
+        </div>
+    </header>
+
+    <!-- Intro / Mission -->
+    <section class="container fade-up">
+        <div class="glass-card">
+            <h2 class="section-title">نداء الضمير</h2>
+            <p>
+                انطلاقاً من الآيات والأحاديث الحاثة على التعاضد والتكاتف، واستجابة لنداء الضمير الحي بكل حر، يشرفنا
+                إطلاق تطبيق <strong>"صندوق غزة"</strong> المنصةً الخيرية الجامعة الهادفة إلى مد يد العون والإغاثة
+                لإخواننا المستضعفين في مشارق الأرض ومغاربها.
+            </p>
+            <br>
+            <p>
+                منصتنا بإذن الله جسر ثقة لربط أهل الإحسان بأهل الحاجة في أشد البقاع تضرراً واحتياجاً.
+            </p>
+        </div>
+    </section>
+
+    <!-- Pledge (Amanah) -->
+    <section class="container fade-up">
+        <div class="glass-card" style="border-color: var(--accent-glow);">
+            <h2 class="section-title">ميثاقنا وعهدنا</h2>
+            <p class="mb-2" style="text-align: center; font-weight: bold;">
+                عهدنا وميثاقنا تحلينا بالأمانة التامة وعدم كنز أي من التبرعات لأنفسنا نحن القائمين عليها.
+            </p>
+
+            <ul class="feature-list">
+                <li>
+                    <strong>ميثاق الشرف الغليظ:</strong> إنا في "صندوق غزة" لن نقتطع بمعونة الله أي نسبة من التبرعات ولن
+                    نأخذ أي رسوم إدارية أو تشغيلية، اللهم إلا ما دعته الضرورة من تكاليف الحفاظ على خوادم الاستضافات
+                    وحسابات المتاجر المضيفة.
+                </li>
+                <li>
+                    <strong>أمانة التوصيل:</strong> أموالكم التي تجودون بها تصل كاملةً مائة بالمائة (100%) إلى مستحقيها
+                    وإلى الأبواب التي تبرعتم لها.
+                </li>
+                <li>
+                    <strong>الشهادة:</strong> نحن خُدّام لهذا الجهد المبارك، نبتغي الأجر من الله وحده، والله على ما نقول
+                    شهيد، وكفى بالله شهيداً وحسيباً.
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Call to Action (Download) -->
+    <section class="container text-center fade-up" style="padding-top: 2rem;">
+        <h2 class="section-title">ساهم الآن</h2>
+        <p class="mb-2">وا أمتاه - صرخة سمعت... إن الوقوف بجانب الحق ليس اختياراً، إنما هو واجب.</p>
+
+        <div class="btn-group">
+            <!-- Download Button -->
+            <a href="assets/صندوق غزة.apk" download class="btn btn-primary">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                </svg>
+                تحميل التطبيق (Android)
+            </a>
+
+            <!-- Web View Button (Trigger Modal) -->
+            <button id="openWebviewBtn" class="btn btn-outline">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9">
+                    </path>
+                </svg>
+                تصفح الموقع
+            </button>
+        </div>
+
+        <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-muted);">
+            كونوا سنداً ودعمًا حقيقياً لأهالينا المستضعفين -المنتصرين بوعد الله بالقرآن والسنة- في مشارق الأرض ومغاربها.
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 صندوق غزة - جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <!-- Webview Modal -->
+    <div id="webviewModal" class="modal-overlay">
+        <div class="modal-content">
+            <button id="closeModalBtn" class="modal-close" aria-label="Close">&times;</button>
+            <iframe id="webviewIframe" class="webview-frame" src="" title="صندوق غزة"></iframe>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>

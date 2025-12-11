@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cairo:wght@300;400;600;800&display=swap');
+
+:root {
+    /* Color Palette - Islamic Premium */
+    --primary: #10b981;
+    /* Emerald Green */
+    --primary-dark: #047857;
+    --accent: #fbbf24;
+    /* Gold */
+    --accent-glow: rgba(251, 191, 36, 0.4);
+    --bg-dark: #0f172a;
+    /* Deep Blue/Black */
+    --bg-darker: #020617;
+    --text-light: #f8fafc;
+    --text-muted: #94a3b8;
+    --glass-bg: rgba(30, 41, 59, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.1);
+
+    /* Spacing & Layout */
+    --container-width: 1200px;
+    --section-padding: 4rem 1rem;
+    --border-radius: 1rem;
+
+    /* Transitions */
+    --transition-fast: 0.3s ease;
+}
+
+/* Reset & Base */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: var(--bg-dark);
+    background-image:
+        radial-gradient(circle at 10% 20%, rgba(16, 185, 129, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(251, 191, 36, 0.05) 0%, transparent 20%);
+    color: var(--text-light);
+    line-height: 1.7;
+    overflow-x: hidden;
+    direction: rtl;
+    /* Force RTL */
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Amiri', serif;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--accent);
+}
+
+.quran-verse {
+    font-family: 'Amiri', serif;
+    font-size: 1.5rem;
+    line-height: 2.2;
+    color: var(--text-light);
+    text-align: center;
+    position: relative;
+    padding: 2rem;
+    margin: 2rem 0;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+    border-radius: var(--border-radius);
+}
+
+.quran-verse::before,
+.quran-verse::after {
+    content: "۞";
+    color: var(--accent);
+    margin: 0 10px;
+    font-size: 1.2em;
+}
+
+/* Utilities */
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.mb-4 {
+    margin-bottom: 4rem;
+}
+
+/* Components: Glassmorphism Card */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius);
+    padding: 2.5rem;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2.5rem;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all var(--transition-fast);
+    border: none;
+    cursor: pointer;
+    gap: 0.5rem;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn-outline:hover {
+    background: rgba(16, 185, 129, 0.1);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+/* Sections */
+header {
+    padding: 6rem 0 4rem;
+    text-align: center;
+}
+
+.logo-text {
+    font-size: 3rem;
+    color: var(--primary);
+    text-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+    margin-bottom: 1rem;
+}
+
+section {
+    padding: var(--section-padding);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    display: block;
+    /* changed from inline-block with absolute positioning */
+    width: 100%;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 120px;
+    /* fixed width for decoration */
+    height: 3px;
+    background: var(--accent);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Featured Lists (Pledge/Features) */
+.feature-list {
+    list-style: none;
+    text-align: right;
+}
+
+.feature-list li {
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-right: 2rem;
+    font-size: 1.1rem;
+}
+
+.feature-list li::before {
+    content: '◆';
+    color: var(--primary);
+    position: absolute;
+    right: 0;
+    top: 5px;
+    font-size: 0.8em;
+}
+
+/* Footer */
+footer {
+    background: var(--bg-darker);
+    padding: 3rem 0;
+    text-align: center;
+    margin-top: 4rem;
+    border-top: 1px solid var(--glass-border);
+}
+
+.footer-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: color var(--transition-fast);
+}
+
+.footer-link:hover {
+    color: var(--primary);
+}
+
+/* Modal / Webview Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    display: none;
+    /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+}
+
+.modal-overlay.active {
+    display: flex;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content {
+    width: 95%;
+    height: 90%;
+    background: var(--bg-dark);
+    border-radius: var(--border-radius);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    /* RTL: Close button on left usually, but let's stick to standard top corner */
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.modal-close:hover {
+    background: var(--primary);
+}
+
+.webview-frame {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Animations */
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+
+    .btn-group {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .quran-verse {
+        font-size: 1.2rem;
+        padding: 1.5rem;
+    }
+
+    .logo-text {
+        font-size: 2.2rem;
+    }
+}
