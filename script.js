@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const openBtn = document.getElementById('openWebviewBtn');
     const closeBtn = document.getElementById('closeModalBtn');
     const iframe = document.getElementById('webviewIframe');
-    const targetUrl = 'https://ugem2005.com/gaza/';
+    const targetUrl = 'https://ugem2005.com/gaza/index.php';
 
     if (openBtn && modal && closeBtn) {
         openBtn.addEventListener('click', () => {
